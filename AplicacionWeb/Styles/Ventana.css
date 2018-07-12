@@ -1,0 +1,184 @@
+﻿.mensaje1 {
+	display: none;
+	position: absolute;
+	margin-left: -200px;
+	width: 410px;
+	left: 50%;
+	top: 150px;
+	z-index:1000;
+	background:#FFF;
+	border: 3px solid #0078F0;
+	overflow:auto;
+	/*padding-bottom:10px;*/	
+}
+.frm{
+	padding:10px;
+	padding-left:35px;
+}
+#user h1{
+	font-family: "georgia", serif;
+	font-size:16px;
+	text-align:center;
+	font-weight:bold;
+	padding:2px;
+	color: #009D4F;
+}
+.frmtitulo h1{
+	color:#FFF;
+	font-size:14px;
+	text-align:center;
+	padding-top:3px;
+}
+.frmtitulo{
+	/*padding-top:3px;*/
+	background:#0078F0;
+	height:22px;
+}
+.frmtitulopass h1{
+	color:#FFF;
+	font-size:14px;
+	text-align:center;
+	padding-top:3px;
+}
+.frmtitulopass{
+	/*padding-top:3px;*/
+	background:#0078F0;
+	height:22px;
+}
+.close{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url(../img/cerrar.png) no-repeat top;
+	width: 30px;
+	height: 18px;
+	cursor: pointer;
+	margin-bottom:3px;
+}
+.close:hover{
+	background: url(../img/cerrarhover.png) no-repeat top;
+}
+#fondo{
+	background-color: #DFDFDF;
+	position: absolute;	
+	display:none;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	z-index: 5;
+}
+
+/* FORMULARIO MENSAJES */
+.mensaje {
+	position:fixed;
+	left: 50%;
+	margin-left: -150px;
+	z-index: 100;
+	width: 390px;
+	top: 10%;
+	display: none;
+}
+
+.mensaje .mtop {
+	background:url(../img/mtop.png) no-repeat;
+	height: 40px;
+}
+
+.mensaje .mtop .close {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url(../img/mcerrar.png) no-repeat top;
+	width: 30px;
+	height: 34px;
+	cursor: pointer;
+}
+
+.mensaje .mcenter {
+	background:url(../img/mcenter.png) repeat-y;
+	padding: 5px 10px 5px 10px;
+}
+
+.mensaje .mbotton {
+	background:url(../img/mbotton.png) no-repeat;
+	height: 20px;
+}
+
+.mensaje h2 {
+	text-align: center;
+	padding-top: 8px;
+	color:#06C;
+	font-size:14px;
+	margin: 0px 10px;
+	border: 0px;
+	border-bottom: 1px dotted #06C;
+}
+
+.mensaje h3 {
+	color: #009
+}
+
+/* FORMULARIO DE INGRESO CUADRO DE DIALOGO */
+.mensaje .itemc {
+	padding: 3px 0px;
+	width:auto;
+  	vertical-align:middle;	
+	margin-top: 2px;
+}
+
+.mensaje .itemc label {
+	float:left;
+	width: 140px;
+	text-align: right;
+	padding: 7px 4px 0px 0px;
+}
+
+.mensaje .itemc input {
+	height: 14px;
+	padding: 5px 3px;
+	width: 190px;
+}
+
+.mensaje .itemc select {
+	height: 26px;
+	padding: 4px 2px;
+	width: 200px;
+}
+
+.mensaje .itemc select:disabled {
+	background-color: #FFF;
+	color: #000;
+}
+
+.mensaje .itemc select option p {
+	color: #06C	
+}
+
+.mensaje .controles {	
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* mensaje de ajax */
+.resultAjax {
+	margin: 0px 11px 10px 11px;
+	display: none;
+	font-weight:bold;
+}
+
+.resultAjaxForm {
+	margin: 5px 15px 5px 15px;
+	font-weight:bold;
+}
+/* error de mensaje */
+.ierror3 {
+	background-color:#FFECEC;
+}
+
+.nombreConfirm {
+	text-align: center;
+	font-weight: bold;
+	color:#333;
+	padding: 5px;
+}

@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.master.cs"
+    Inherits="Mantenimiento.AplicacionWeb.PaginaMaestra" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>:: ELECTROSUR</title>
+    <meta name="author" content="Electrosur" />
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link href="Styles/Plantilla.css" type="text/css" rel="stylesheet" />
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="Scripts/MenuI6.js"></script>
+    <![endif]-->
+</head>
+<body onload="">
+    <div id="header">
+        <span class="logo"><a href="#" title="ELECTROSUR">
+            <img alt="ELECTROSUR" src="img/logo.gif" width="104px"/></a></span> <span class="title"><a href="Panel.aspx" title="Ir al Panel de Control">
+                Sistema de Mantenimiento - Transmisión</a></span>
+    </div>
+    <!--fin header-->
+    <div id="header_cuerpo">
+    
+        <div id="status">
+            <span id="liveclock" style="font-weight: bold;"></span>
+            <span class="logout">
+                <a href="CerrarSesion.aspx" title="Salir en forma segura">Desconectar</a> 
+            </span>
+            
+        </div>
+
+        <ul id="menu">
+            <li class="node">
+                <a href="#" title="Sitio">Sitio</a>
+                <ul>
+                    <li>
+                        <a href="Panel.aspx" class="icon-16-cpanel">Panel de Control</a>
+                    </li>
+                    <li>
+                        <a href="Perfil.aspx" class="icon-16-perfil">Mi perfil</a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon-16-info">Información del Sistema</a>
+                    </li>
+                    <li>
+                        <a href="CerrarSesion.aspx" class="icon-logout-16">Salir</a>
+                    </li>
+                </ul> 
+            </li>
+            <li class="node">
+                <a href="#" title="Usuarios">Usuarios</a>
+                <ul>
+                    <li class="node">
+                        <a href="GestionUsuarios.aspx" class="icon-16-user">Gestor de Usuarios</a>
+                        <ul>
+                            <li><a  href="UsuarioDatos.aspx?opc=nuevo" class="icon-16-nuevo">Añadir nuevo Usuario</a></li>
+                        </ul>
+                    </li>
+                    <li class="node">
+                        <a href="GestionGrupos.aspx" class="icon-16-grupos">Gestor de Grupos</a>
+                        <ul>
+                            <li><a  href="GrupoUsuario.aspx?opc=nuevo" class="icon-16-nuevo">Añadir nuevo Grupo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><!--menu para Usuarios-->
+            <li class="node">
+                <a href="#" title="Localizaciones">Sub-Estaciones</a>
+                <ul>
+                    <li >
+                        <a href="GestionLocalizaciones.aspx" class="icon-16-SE">Gestor de Sub-Estaciones</a>
+                    </li>
+                </ul>
+            </li><!--fin menu para Localizaciones-->
+            <li class="node">
+                <a href="#" title="Equipos">Equipos</a>
+                <ul>
+                    <li class="node">
+                        <a href="GestionEquipos.aspx" class="icon-16-GE">Gestor de Equipos</a>
+                        <ul>
+                            <li><a  href="Equipo.aspx?opc=nuevo" class="icon-16-nuevo">Añadir nuevo Equipo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><!--fin menu para equipos-->
+            <li class="node">
+                <a href="#" title="Planes">Planes</a>
+                <ul>
+                    <li >
+                        <a href="GestionPlanes.aspx" class="icon-16-GE">Gestor de Planes</a>
+                    </li>
+                </ul>
+            </li><!--fin menu para planes-->
+            <li class="node">
+                <a href="#" title="Planes">Mantenimiento Rutinario</a>
+                <ul>
+                    <li >
+                        <a href="#" class="icon-16-GE">Asociacion Equipos/Inmuebles - Plan</a>
+                    </li>
+                    <li >
+                        <a href="#" class="icon-16-GE">Mantenimientos Iniciales</a>
+                    </li>
+                    <li >
+                        <a href="#" class="icon-16-GE">Próximos Mantenimientos</a>
+                    </li>
+                    <li class="node">
+                        <a href="#" class="icon-16-progra-act">Ciclo Mantenimiento Rutinario</a>
+                        <ul>
+                            <li >
+                                <a href="ProgramacionActividadesRutinarias.aspx" class="icon-16-GE">Programación de Actividades - Actividades Iniciadas</a>
+                            </li>
+                            <li >
+                                <a href="EjecucionActividadesRutinarias.aspx" class="icon-16-GE">Ejecución de Actividades - Actividades Programadas</a>
+                            </li>
+                            <li >
+                                <a href="HistorialEjecucionActividadesR.aspx" class="icon-16-GE">Historial Actividades Rutinarias Ejecutadas</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </li><!--fin menu para matenimiento rutinario-->
+        </ul>
+        <div style="clear: both">
+        </div>
+
+    </div>
+    
+    <!--fin header_cuerpo-->
+    <div id="cuerpo">
+        <asp:ContentPlaceHolder ID="Cuerpo" runat="server">
+        </asp:ContentPlaceHolder>
+        <noscript>
+			¡Advertencia! Para poder realizar operaciones correctamente 
+            desde la administración, debe tener habilitado JavaScript.
+         </noscript>
+    </div>
+    <!--fin cuerpo -->
+    <div class="clr">
+    </div>
+    <div id="pie">
+        <p class="copyright">
+            Sistema de Mantenimiento - Transmisión<br />
+            ©2013 <a href="#">ELECTROSUR</a></p>
+    </div>
+</body>
+</html>
